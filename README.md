@@ -78,7 +78,7 @@ You Created. --> Save.
 	
 	# Give Unique Name And S3 Bucket which you created.
 	export NAME=class27.k8s.local
-	export KOPS_STATE_STORE=s3://class21.k8s.local
+	export KOPS_STATE_STORE=s3://class27.k8s.local
  
     source .bashrc
 	
