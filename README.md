@@ -64,7 +64,7 @@ You Created. --> Save.
 
 
 
-# 6) create an S3 bucket Execute below commond in KOPS Server use unique bucket name if you get bucket name exists error.
+# 6) create an S3 bucket Execute below command in KOPS Server use unique bucket name if you get bucket name exists error.
 
 	aws s3 mb s3://class21.k8s.local
 	aws s3 ls
