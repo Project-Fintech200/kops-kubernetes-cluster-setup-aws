@@ -1,23 +1,23 @@
 # kops-kubernetes-cluster-configuration
 # Landmark Technologies,  -    Landmark Technologies 
 # Tel: +1 437 215 2483,   -     +1 437 215 2483 
-# mylandmarktech@gaIL.com,  -    www.mylandmarktech.com 
+# mylandmarktech@gmail.com,  -    www.mylandmarktech.com 
 
 # Setting up Kubernetes (K8s) Cluster on AWS Using KOPS
 
-1.kops is a software use to create production ready k8s cluster in a cloud provider like AWS.
+1. KOPS is a software use to create production ready k8s cluster in a cloud provider like AWS.
 
-2. kOPS SUPPORTS MULTIPLE CLOUD PROVIDERS
+2. KOPS SUPPORTS MULTIPLE CLOUD PROVIDERS
 
-3. Kops compete with managed kubernestes services like EKS, AKS and GKE
+3. KOPS compete with managed kubernestes services like EKS, AKS and GKE
 
-4. Kops is cheaper than the others.
+4. KOPS is cheaper than the others.
 
-5. Kops create production ready K8S.
+5. KOPS create production ready K8S.
 
 6. KOPS create resources like: LoadBalancers, ASG, Launch Configuration, woker node Master node (CONTROL PLANE.
 
-7. KOPS is IaaC
+7. KOPS is IaaC - Infrastructure as a Code
 
 #!/bin/bash
 # 1) Create Ubuntu EC2 instance in AWS
