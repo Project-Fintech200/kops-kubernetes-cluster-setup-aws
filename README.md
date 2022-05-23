@@ -23,6 +23,8 @@
 # 1) Create Ubuntu EC2 instance in AWS
 
 # 2) install AWSCLI
+# use official documentation for update on how to install AWSCLI
+# https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
  sudo adduser kops
  sudo echo "kops  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/kops
