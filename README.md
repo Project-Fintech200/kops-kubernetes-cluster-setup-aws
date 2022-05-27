@@ -63,7 +63,7 @@
  sudo curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
  sudo chmod +x ./kubectl
  sudo mv ./kubectl /usr/local/bin/kubectl
- aws s3 mb s3://class27.k8s.local 
+ aws s3 mb s3://bridges102.k8s.local 
  aws s3 ls
  
   # Programatic access using
@@ -80,7 +80,7 @@
 Then Attach IAM role to ubuntu server from Console Select KOPS Server --> Actions --> Security --> Attach/Replace IAM Role --> Select the role which You Created. --> Save.
 
 # 6) create an S3 bucket Execute below command in KOPS Server use unique bucket name if you get bucket name exists error.
-	aws s3 mb s3://class27.k8s.local
+	aws s3 mb s3://bridges102.k8s.local
 	aws s3 ls
 	
     ex: s3://nubong.k8s.local
@@ -92,8 +92,8 @@ Then Attach IAM role to ubuntu server from Console Select KOPS Server --> Action
 	
 # Give Unique Name And S3 Bucket which you created.
 # paste enviromental variables after "for example" without a comment from line 4
-	export NAME=class27.k8s.local
-	export KOPS_STATE_STORE=s3://class27.k8s.local
+	export NAME=bridges102.k8s.local
+	export KOPS_STATE_STORE=s3://bridges102.k8s.local
 
 # refresh the installation 
     source .bashrc
@@ -106,7 +106,7 @@ Then Attach IAM role to ubuntu server from Console Select KOPS Server --> Action
 # Details of installed EC2 instance displays availablity zone "us-east-1d"
 # Number of nodes and server size required can be altered as necessary
 
-	kops create cluster --zones us-east-1d --networking weave --master-size t2.medium --master-count 1 --node-size t2.medium --node-count=2 ${NAME}
+    kops create cluster --zones us-east-1d --networking weave --master-size t2.medium --master-count 1 --node-size t2.micro --node-count=2 ${NAME}
 
 <<mm 	
 # Cluster configuration has been created.
@@ -115,10 +115,10 @@ Suggestions:
  * edit this cluster with: kops edit cluster class27.k8s.local
  * edit your node instance group: kops edit ig --name=class27.k8s.local nodes-us-east-1d
  * edit your master instance group: kops edit ig --name=class27.k8s.local master-us-east-1d
-    kops edit ig --name=class27.k8s.local us-east-1d
+    kops edit ig --name=bridges102.k8s.local us-east-1d
 
 # Finally configure your cluster with:   
-kops update cluster --name class27.k8s.local --yes --admin
+kops update cluster --name bridges102.k8s.local --yes --admin
 mm 
 
 # copy sshkeys into the cluster with admin access	
@@ -143,6 +143,7 @@ mm
 # 11) connect to the master node
     sh -i ~/.ssh/id_rsa ubuntu@PublicIPAddress
     ssh -i ~/.ssh/id_rsa ubuntu@3.90.203.23
+    
 # 11) To list nodes
 
 	  kubectl get nodes 
